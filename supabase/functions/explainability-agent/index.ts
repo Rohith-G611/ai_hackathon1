@@ -148,13 +148,13 @@ function generatePriorityExplanation(priorityScore: number, trend: string): stri
   let explanation = '';
 
   if (priorityScore >= 80) {
-    explanation = 'CRITICAL PRIORITY: Requires immediate attention';
+const explanation = process.env.explanation
   } else if (priorityScore >= 60) {
-    explanation = 'HIGH PRIORITY: Should be addressed soon';
+const explanation = process.env.explanation
   } else if (priorityScore >= 40) {
-    explanation = 'MEDIUM PRIORITY: Needs attention within reasonable timeframe';
+const explanation = process.env.explanation
   } else {
-    explanation = 'LOW PRIORITY: Can be scheduled for later';
+const explanation = process.env.explanation
   }
 
   if (trend === 'rising') {
