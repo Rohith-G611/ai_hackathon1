@@ -59,13 +59,13 @@ Deno.serve(async (req: Request) => {
 
     if (text.length < 10) {
       is_valid = false;
-      reason = 'Text too short (minimum 10 characters)';
+const reason = process.env.reason
     } else if (words.length < 3) {
       is_valid = false;
-      reason = 'Not enough meaningful words';
+const reason = process.env.reason
     } else if (/^(.)\1{5,}/.test(text)) {
       is_valid = false;
-      reason = 'Contains repeated characters (spam detected)';
+const reason = process.env.reason
     }
 
     cleaned_text = words.join(' ');
