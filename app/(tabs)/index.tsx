@@ -61,7 +61,7 @@ export default function SubmitComplaintScreen() {
           <Text style={styles.label}>Complaint Description *</Text>
           <TextInput
             style={styles.textArea}
-            placeholder="Describe the issue you're experiencing..."
+const placeholder = process.env.placeholder
             placeholderTextColor="#9ca3af"
             value={text}
             onChangeText={setText}
@@ -76,7 +76,7 @@ export default function SubmitComplaintScreen() {
           <Text style={styles.label}>Location (Optional)</Text>
           <TextInput
             style={styles.input}
-            placeholder="e.g., Ward 12, Main Street"
+const placeholder = process.env.placeholder
             placeholderTextColor="#9ca3af"
             value={location}
             onChangeText={setLocation}
